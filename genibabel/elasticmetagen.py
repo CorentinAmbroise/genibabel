@@ -139,9 +139,7 @@ class MetaGen(object):
             if pos_up is not None:
                 interval["end"] = {"lte": pos_up}
             conditions.append({
-                "range" : {
-                    "pos": interval
-                }
+                "range" : interval
             })
 
         query = {
