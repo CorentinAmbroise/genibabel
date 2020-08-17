@@ -135,9 +135,9 @@ class MetaGen(object):
         if pos_low is not None or pos_up is not None:
             interval = {}
             if pos_low is not None:
-                interval["start"] = {"lte": pos_up}
+                interval["start"] = {"gte": pos_low}
             if pos_up is not None:
-                interval["end"] = {"gte": pos_low}
+                interval["end"] = {"lte": pos_up}
             conditions.append({
                 "range" : interval
             })
